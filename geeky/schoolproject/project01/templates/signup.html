@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <body>
+    
+
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand" href="/">Todo for Everyone</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto">
+                  
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/signup">Sign Up</a>
+                  </li>
+                  
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+
+          <div class="container form">
+
+          <style> 
+          
+          
+          </style>
+
+            <div class="jumbotron">
+
+              <style>
+                .jumbotron{
+                      margin-top: 5mm;
+                      background-color: rgb(189, 186, 189);
+                      font-style: normal;
+                      color: rgb(0, 0, 0);
+                      font-weight: 450;
+                      padding-left: 5mm;
+                      border-radius: 5mm;
+                  }
+              </style>
+
+              <h1 class="display-4">Get your Todos started</h1>
+
+              <p class="lead">A one stop solution for your daily Todos</p>
+              
+              <p>This tool avails create, update, read and delete your tasks</p>
+              
+              <hr class="my-4">
+
+              <form method="post" action="/signup/">
+                {{form.as_ul}}
+              </form>
+
+              <hr class="my-4">
+
+              <input class= "btn btn-success" type="submit" value="Create Account">
+              <hr>
+            </div>
+          </div>
+
+       
+</body>
