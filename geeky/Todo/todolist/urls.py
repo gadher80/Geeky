@@ -5,6 +5,6 @@ from todolist.views import home, login, signup
 
 urlpatterns = [
     path('', home, name='home'),
-    path('login/',login),
+    path('login/',login, name= 'login'),
     path('signup/',signup)
 ]
