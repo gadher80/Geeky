@@ -1,6 +1,11 @@
-from django.forms import Modelform
-
+from django import forms
 from todolist.models import Todo
 
-class TodoForm(Modelform)
+
+class ToDoListForm(forms.ModelForm):
+    
+    class Meta:
+        model = Todo
+        fields = ['title','status','priority']
+
 

@@ -1,8 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib import admin
+
 
 # Create your models here.  
-class  Todo(models.Model):
+class Todo(models.Model):
 
     choices_Status= [('C','Completed'),('P','Pending')]
     choices_Priority = [('1','1'),('2','2'),('3','3'),('4','4'),('5','5')]
@@ -12,3 +14,11 @@ class  Todo(models.Model):
     date= models.DateTimeField(auto_now_add=True)
     user= models.ForeignKey(User, on_delete= models.CASCADE)
     priority = models.CharField(max_length=2, choices=choices_Priority)
+
+    def __str__(self) -> str:
+        return str(self.user)
+
+class ToDoAdmin(admin.ModelAdmin):
+    list_display = ('title','status','priority','date')
+
+

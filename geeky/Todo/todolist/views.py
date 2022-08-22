@@ -31,9 +31,6 @@ def login(request):
             return render(request,'login.html', context= context)
 
 
-
-
-
 def signup(request):
     if request.method == 'GET':
 
@@ -58,5 +55,3 @@ def signup(request):
             #return HttpResponse('Invalid')
             return render(request,'signup.html',context=context)
         
-
-
